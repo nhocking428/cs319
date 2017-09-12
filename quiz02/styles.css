@@ -1,12 +1,7 @@
-#htmllist {
-    color: darkblue;
-}
-
-.csslist{
-    font-family: serif;
-}
-
-table   {
+table, th, td {
     border: 1px solid black;
+}
+
+th, td  {
     padding: 2px;
 }
