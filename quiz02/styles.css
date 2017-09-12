@@ -6,7 +6,7 @@
     font-family: serif;
 }
 
-table, th, td {
+table   {
     border: 1px solid black;
     padding: 2px;
 }
