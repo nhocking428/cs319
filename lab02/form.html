@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 2: Form</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+    <body>
+        <h4>Drink Type:</h4>
+        <form name="drinktype" action="#" method="get">
+            <input type="radio" name="americano" value="selectAmericano">Americano<br>
+            <input type="radio" name="cappuccino" value="selecetCappuccino">Cappuccion<br>
+            <input type="radio" name="latte" value="selectLatte">Latte<br>
+            <input type="radio" name="macchiato" value="selectMacchiato">Macchiato<br>
+            <input type="radio" name="mocha" value="selectMocha">Mocha
+        <h4>Size:</h4>
+        <form name="selectSize" action="#" method="get">
+            <select>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        <h4>Flavors and Extras:</h4>
+        <form name="flavors" action="#" method="get">
+            <input type="checkbox" name="espressoshot" value="selectEspresso">Extra Espresso Shot<br>
+            <input type="checkbox" name="caramelshot" value="selectCaramel">Caramel Shot<br>
+            <input type="checkbox" name="hazelnutshot" value="selectHazelnut">Hazelnut Shot<br>
+            <input type="checkbox" name="vanillashot" value="selectVanilla">Vanilla Shot<br>
+        <h4>Order For (name):</h4>
+        <form name="orderfor" action="#" method="get">
+            <input type="text" name="orderfor"><br>                                     
+            <hr />
+            <input class="order" type="submit" value="Order!">
+        </body>
+</html>
