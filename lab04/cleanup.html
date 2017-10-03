@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab: 04</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function sortUp() {
+                var userFirst = document.cleanup.firstName.value;
+                var userMid = document.cleanup.midName.value;
+                var userLast = document.cleanup.lastName.value;
+                
+                userFirst= userFirst.trim();
+                userMid= userMid.trim();
+                userLast= userLast.trim();
+                
+                userFirst= userFirst.toUpperCase();
+                userMid= userMid.toUpperCase();
+                userLast= userLast.toUpperCase();
+                
+                document.getElementById("yourName").innerHTML= userFirst + " " + userMid + " " + userLast;
+            }
+        </script>
+        <h1>Name Cleanup</h1>
+        <form name="cleanup" id="cleanup" action="#" method="get">
+            First Name:
+                <br>
+            <input type="text" id="firstName" name="firstName" value="";>
+                <p></p>
+            Middle Initial:
+                <br>
+            <input type="text" id="midName" name="midName" value="";>
+                <p></p>
+            Last Name:
+                <br>
+            <input type="text" id="lastName" name="lastName" value="";>
+                <p></p>
+            <input type="button" id="sortButton" name="sortButton" value="Cleanup Name" onclick="sortUp();">
+            <hr />
+            Full Name:
+            <p id="yourName"></p>
+        </form>
+    </body>
+</html>
