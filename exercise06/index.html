@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise: 6</title>
+    <meta charset="utf-8">
+<body>
+    <script>
+        function guessGame() {
+            
+            var tru = 3;
+            var fal = document.guess.userGuess.value;
+            
+            fal = fal.trim();
+            
+            if (fal == "")  {
+                alert("Please enter something");
+                document.guess.userGuess.focus();
+                return false;
+            } else if (isNaN(fal) == true)  {
+                alert("Please enter a number");
+                document.guess.userGuess.select();
+                return false;
+            } else if (fal < 1) {
+                alert("That number is below the range");
+                document.guess.userGuess.select();
+                return false;
+            } else if (fal > 10) {
+                alert("That number is above the range");
+                document.guess.userGuess.select();
+                return false;
+            } else if (fal > tru)   {
+                alert("Guess lower");
+                return false;
+            } else if (fal < tru)   {
+                alert("Guess higher");
+                return false;
+            } else  {
+                alert("You guessed right!");
+                return true;
+            } 
+        }
+    </script>
+    <h1>Guess a Number!</h1>
+    
+    <form name="guess" name="guess" action="#" method="get">
+        
+        <p>Guess a number between 1 and 10:<br>
+        <input type="text" id="userGuess" name="userGuess" value=""></p>
+        
+        <input type="submit" id="subGuess" name="subGuess" value="Submit" onclick="guessGame();">
+    </form>
+</body>
+</head>
+</html>
