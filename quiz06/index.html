@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz: 6</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        function validate() {
+        
+        var col = document.colour.favColor.value;
+        
+        if (isNaN(col) == true)  {
+            alert("Your favorite color is " + col);
+            return true;
+        }   else    {
+            alert("Do not enter a number");
+            return false;
+        }
+        }
+    </script>
+    <form name="colour" id="colour" action="#" method="get">
+        
+        <p>What is your favorite color?<br>
+        <input type="text" id="favColor" name="favColor" value=""></p>
+        
+        <input type="submit" id="subName" name="subName" value="Submit" onclick="validate();">
+    </form>
+</body>
+</html>
