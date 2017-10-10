@@ -6,7 +6,7 @@
     </head>
     <body>
         <script>
-            function Validate() {
+        function validate() {
                 
             var first = document.userName.firstName.value;
             var last = document.userName.lastName.value;
@@ -17,26 +17,29 @@
             mail = mail.trim();
             
             if (first == "") {
-                alert("Please enter your First Name")
+                alert("Please enter your First Name");
+                document.userName.firstName.focus();
                 return false;
-            } else  {
+            } else if (last == "")  {
+                alert("Please enter your Last Name");
+                document.userName.lastName.focus();
+                return false;
+            } else if (mail == "")  {
+                alert("Please enter your Email Address");
+                document.userName.email.focus();
+                return false;
+            } else {
+                alert("Thank you " + first + " " + last + " we will message you at " + mail + "!");
                 return true;
             }
-            if (last == "") {
-                alert("Please enter your Last Name")
-                return false;
-            } else  {
-                alert("Hello " + first + " " + last)
-                return true;
-            }
-            }
+        }
         </script>
         <h1>Name Validator</h1>
             <form name="userName" action="#" method="get">
             <p>First Name:<input type="text" id="firstName" name="firstName" value=""></p>
             <p>Last Name:<input type="text" id="lastName" name="lastName" value=""></p>
-            <p>Email:<input type="text" id="email" name="email" value""></p>
-            <p><input type="submit" id="subName" name="subName" value="Submit" onclick="Validate();"></p>
+            <p>Email:<input type="text" id="email" name="email" value=""></p>
+            <p><input type="submit" id="subName" name="subName" value="Submit" onclick="validate();"></p>
         </form>
     </body>
 </html>
