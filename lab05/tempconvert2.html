@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature Converter: 2</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+    function tempConvert()  {
+        
+        var fah = document.converter.fahren.value;
+        var cel = document.converter.cels.value;
+        
+        if (document.getElementById("ftoc").checked == true) {
+            //document.getElementById("cels").innerHTML= (fah - 32) * .5556);
+            alert((fah - 32) * .5556);
+            return true;
+    }   else if (document.getElementById("ctof").checked == true) {
+            alert((cel + 32) * 1.8 " Temp in fahrenheit");
+            return true;
+    }   else    {
+            alert("Please enter a temperature");
+            return false;
+    }
+    }
+    </script>
+    
+    <h1>Temperature Converter 2.0</h1>
+    
+    <form name="converter" action="#" method="get">
+        
+    <p>Temperature in Fahrenheit:<br>
+    <input type="number" id="fahren" name="fahren" value="">
+    </p>
+        
+    <input type="radio" id="ftoc" name="convert" value="fahrenToCels">F to C<br>
+    <input type="radio" id="ctof" name="convert" value="celsToFahren">C to F<br>
+        
+    <p>Temperature in Celsius:<br>
+    <input type="number" id="cels" name="cels" value="">
+    </p>
+    
+    <input type="button" id="tempCon" name="tempCon" value="Convert" onclick="tempConvert();">
+    </form>
+</body>
+</html>
