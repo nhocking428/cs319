@@ -30,9 +30,11 @@
                 return false;
             } else if (fal > tru)   {
                 alert("Guess lower");
+                document.guess.userGuess.select();
                 return false;
             } else if (fal < tru)   {
                 alert("Guess higher");
+                document.guess.userGuess.select();
                 return false;
             } else  {
                 alert("You guessed right!");
