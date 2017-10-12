@@ -11,10 +11,12 @@
             var first = document.userName.firstName.value;
             var last = document.userName.lastName.value;
             var mail = document.userName.email.value;
+            var age = document.userName.userAge.value;
             
             first = first.trim();
             last = last.trim();
             mail = mail.trim();
+            age = age.trim();
             
             if (first == "") {
                 alert("Please enter your First Name");
@@ -28,6 +30,21 @@
                 alert("Please enter your Email Address");
                 document.userName.email.focus();
                 return false;
+            } else if (mail.endsWith("@uwec.edu") == false) {
+                alert("Please enter a valide UWEC email address");
+                return false;
+            } else if (age == "")   {
+                alert("Enter something in Age");
+                return false;
+                document.userName.userAge.focus();
+            } else if (isNaN(age) == true) {
+                alert("Please enter a number for age.");
+                return false;
+                document.userName.userAge.focus();
+            } else if (age < 18)    {
+                alert("You have to be at least 18 to enter this site.");
+                return false;
+                document.userName.userAge.focus();
             } else {
                 alert("Thank you " + first + " " + last + " we will message you at " + mail + "!");
                 return true;
@@ -35,11 +52,13 @@
         }
         </script>
         <h1>Name Validator</h1>
-            <form name="userName" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get">
+            <form name="userName" action="#" method="get">
             <p>First Name:<input type="text" id="firstName" name="firstName" value=""></p>
             <p>Last Name:<input type="text" id="lastName" name="lastName" value=""></p>
             <p>Email:<input type="text" id="email" name="email" value=""></p>
-            <p><input type="submit" id="subName" name="subName" value="Submit" onsubmit="validate();"></p>
+            <p>Age:<input type="text" id="userAge" name="userAge" value=""></p>
+            <p><input type="submit" id="subName" name="subName" value="Submit" onclick="validate();"></p>
+            
         </form>
     </body>
 </html>
