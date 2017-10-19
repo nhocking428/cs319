@@ -9,8 +9,8 @@
             function validateAge()  {
                 var ag = document.checkAge.age.value;
                 
-                if (a == "")    {
-                    alert("Please enter something");
+                if (ag == "")    {
+                    alert("Please enter something.");
                     document.checkAge.age.focus();
                     return false;
                 } else {
@@ -18,10 +18,10 @@
                 }
             }
         </script>
-        <form name="checkAge" id="checkAge" action="#" method="get" onclick="return validateAge();">
+        <form name="checkAge" id="checkAge" action="#" method="get" >
             <p>How old are you?<br>
             <input type="text" name="age" id="age"></p>
-            <p><input type="submit" name="submit=" id="submit" value="Submit"></p>
+            <p><input type="submit" name="submit=" id="submit" value="Submit" onclick="return validateAge();"></p>
         </form>
     </body>
 </html>
